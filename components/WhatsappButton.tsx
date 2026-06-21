@@ -1,7 +1,7 @@
 export default function WhatsappButton() {
   return (
     <a
-      href="https://wa.me/6281220554429?text=Halo%20The%20Koi,%20saya%20ingin%20melakukan%20reservasi."
+      href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20bertanya%20mengenai%20reservasi."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp"

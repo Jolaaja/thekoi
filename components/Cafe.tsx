@@ -189,7 +189,7 @@ export default function Cafe() {
             </a>
 
             <a
-              href="https://wa.me/6281220554429?text=Halo%20Pika%20Piko%20Cafe,%20saya%20ingin%20bertanya%20tentang%20menu%20dan%20reservasi."
+              href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20bertanya%20mengenai%20reservasi."
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -206,7 +206,7 @@ export default function Cafe() {
               "
             >
               Contact Cafe
-            </a>
+            </>
 
           </div>
 

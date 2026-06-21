@@ -87,12 +87,14 @@ export default function Spa() {
 
               <div className="bg-white p-5 rounded-2xl shadow">
                 🕯 Private Room
-              </div>
+            </div>
 
             </div>
 
             <a
-              href="#contact"
+              href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20bertanya%20mengenai%20reservasi."
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 inline-block
                 mt-10
@@ -103,12 +105,13 @@ export default function Spa() {
                 py-4
                 rounded-full
                 font-semibold
-                transition
+                transition-all
+                duration-300
+                hover:scale-105
               "
             >
               Reserve Spa
             </a>
-
           </div>
 
         </div>
