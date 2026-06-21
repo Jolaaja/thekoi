@@ -32,53 +32,66 @@ export default function GuestHouse() {
           <div className="grid grid-cols-2 gap-4">
 
             <div className="relative h-[260px] rounded-3xl overflow-hidden">
-
               <Image
                 src="/images/guesthouse/guest-1.jpeg"
                 alt="Guest House Room"
                 fill
                 className="object-cover hover:scale-105 transition duration-700"
               />
-
             </div>
 
             <div className="relative h-[260px] rounded-3xl overflow-hidden">
-
               <Image
                 src="/images/guesthouse/guest-2.jpeg"
                 alt="Guest House Room"
                 fill
                 className="object-cover hover:scale-105 transition duration-700"
               />
-
             </div>
 
             <div className="relative h-[260px] rounded-3xl overflow-hidden">
-
               <Image
                 src="/images/guesthouse/guest-3.jpeg"
                 alt="Guest House Bathroom"
                 fill
                 className="object-cover hover:scale-105 transition duration-700"
               />
-
             </div>
 
             <div className="relative h-[260px] rounded-3xl overflow-hidden">
-
               <Image
                 src="/images/guesthouse/guest-4.jpeg"
                 alt="Guest House Bathroom"
                 fill
                 className="object-cover hover:scale-105 transition duration-700"
               />
-
             </div>
 
           </div>
 
           {/* CONTENT */}
           <div>
+
+            {/* PRICE CARD */}
+            <div className="bg-yellow-500 text-black p-6 rounded-2xl mb-8">
+
+              <p className="uppercase tracking-[3px] text-sm">
+                Starting From
+              </p>
+
+              <h3 className="text-4xl font-bold">
+                Rp 400.000
+              </h3>
+
+              <p className="font-medium">
+                per malam
+              </p>
+
+              <p className="mt-3 font-semibold">
+                ✓ Free Breakfast at Pika Piko Cafe
+              </p>
+
+            </div>
 
             <h3 className="text-white text-4xl font-bold mb-8">
               Modern Room With Complete Facilities
@@ -115,14 +128,19 @@ export default function GuestHouse() {
             <p className="text-gray-400 leading-8">
               Guest House The Koi dirancang untuk memberikan
               kenyamanan maksimal dengan desain modern,
-              kamar yang luas, serta fasilitas lengkap
-              untuk pengalaman menginap yang menyenangkan.
+              kamar yang luas, fasilitas lengkap serta
+              sarapan gratis di Pika Piko Cafe untuk setiap
+              malam menginap.
             </p>
 
             <a
-              href="#contact"
+              href="https://wa.me/6281323275441?text=Halo%20The%20Koi,%20saya%20ingin%20booking%20Guest%20House%20Rp400.000%20per%20malam."
+              target="_blank"
+              rel="noopener noreferrer"
               className="
-                inline-block
+                inline-flex
+                items-center
+                justify-center
                 mt-10
                 bg-yellow-500
                 hover:bg-yellow-400
@@ -131,7 +149,10 @@ export default function GuestHouse() {
                 py-4
                 rounded-full
                 font-semibold
-                transition
+                transition-all
+                duration-300
+                hover:scale-105
+                shadow-lg
               "
             >
               Book Guest House

@@ -54,6 +54,7 @@ export default function VillaSection() {
           {/* Text */}
           <div>
 
+            {/* Stats */}
             <div className="grid grid-cols-2 gap-6 mb-10">
 
               <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
@@ -82,6 +83,24 @@ export default function VillaSection() {
 
             </div>
 
+            {/* Price Card */}
+            <div className="bg-yellow-500 text-black p-6 rounded-2xl mb-8">
+
+              <p className="uppercase tracking-[3px] text-sm">
+                Starting From
+              </p>
+
+              <h3 className="text-4xl font-bold">
+                Rp 2.000.000
+              </h3>
+
+              <p className="font-medium">
+                per malam
+              </p>
+
+            </div>
+
+            {/* Features */}
             <ul className="space-y-5 text-gray-300 text-lg mb-10">
 
               <li>✓ Private Villa Experience</li>
@@ -98,8 +117,9 @@ export default function VillaSection() {
 
             </ul>
 
+            {/* Button */}
             <a
-              href="https://wa.me/6281220554429?text=Halo%20The%20Koi,%20saya%20ingin%20booking%20Villa."
+              href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20booking%20Villa%20Rp2.000.000%20per%20malam."
               target="_blank"
               rel="noopener noreferrer"
               className="
