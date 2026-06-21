@@ -189,7 +189,7 @@ export default function Cafe() {
             </a>
 
             <a
-              href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20bertanya%20mengenai%20reservasi."
+              href="https://wa.me/6285722179300?text=Halo%20Pika%20Piko%20Cafe,%20saya%20ingin%20bertanya%20mengenai%20menu%20dan%20reservasi."
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -206,39 +206,7 @@ export default function Cafe() {
               "
             >
               Contact Cafe
-            </>
-
-          </div>
-
-        </div>
-
-        {/* GOOGLE MAPS */}
-        <div className="mt-24">
-
-          <div className="text-center mb-8">
-
-            <h3 className="text-white text-3xl font-bold">
-              Visit Pika Piko Cafe
-            </h3>
-
-            <p className="text-gray-400 mt-4">
-              Temukan lokasi kami dan nikmati pengalaman
-              terbaik bersama keluarga maupun teman.
-            </p>
-
-          </div>
-
-          <div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
-
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.628271636189!2d107.7512934749237!3d-6.9349544930649785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c391813e74a3%3A0x7ab4abf1cd8e202e!2sAndi%20rahya!5e0!3m2!1sid!2sid!4v1781982096733!5m2!1sid!2sid"
-              width="100%"
-              height="500"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            </a>
 
           </div>
 
