@@ -3,9 +3,10 @@ import Image from "next/image";
 export default function GuestHouse() {
   return (
     <section
-      id="guesthouse"
-      className="bg-[#111111] py-32"
-    >
+        id="guesthouse"
+        data-aos="fade-left"
+        className="bg-[#111111] py-32"
+      >
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">
@@ -99,27 +100,105 @@ export default function GuestHouse() {
 
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
 
-              <div className="bg-zinc-900 p-5 rounded-2xl text-white">
+              <div
+                  className="
+                    bg-zinc-900
+                    p-5
+                    rounded-2xl
+                    border
+                    border-zinc-800
+                    text-white
+                    transition-all
+                    duration-500
+                    hover:-translate-y-2
+                    hover:border-yellow-500
+                  "
+                >
                 ✓ Air Conditioner
               </div>
 
-              <div className="bg-zinc-900 p-5 rounded-2xl text-white">
+              <div
+                  className="
+                    bg-zinc-900
+                    p-5
+                    rounded-2xl
+                    border
+                    border-zinc-800
+                    text-white
+                    transition-all
+                    duration-500
+                    hover:-translate-y-2
+                    hover:border-yellow-500
+                  "
+                >
                 ✓ Smart TV
               </div>
 
-              <div className="bg-zinc-900 p-5 rounded-2xl text-white">
+              <div
+                  className="
+                    bg-zinc-900
+                    p-5
+                    rounded-2xl
+                    border
+                    border-zinc-800
+                    text-white
+                    transition-all
+                    duration-500
+                    hover:-translate-y-2
+                    hover:border-yellow-500
+                  "
+                >
                 ✓ WiFi
               </div>
 
-              <div className="bg-zinc-900 p-5 rounded-2xl text-white">
+              <div
+                className="
+                  bg-zinc-900
+                  p-5
+                  rounded-2xl
+                  border
+                  border-zinc-800
+                  text-white
+                  transition-all
+                  duration-500
+                  hover:-translate-y-2
+                  hover:border-yellow-500
+                "
+              >
                 ✓ Hot Water
               </div>
 
-              <div className="bg-zinc-900 p-5 rounded-2xl text-white">
+              <div
+                className="
+                  bg-zinc-900
+                  p-5
+                  rounded-2xl
+                  border
+                  border-zinc-800
+                  text-white
+                  transition-all
+                  duration-500
+                  hover:-translate-y-2
+                  hover:border-yellow-500
+                "
+              >
                 ✓ Private Bathroom
               </div>
 
-              <div className="bg-zinc-900 p-5 rounded-2xl text-white">
+              <div
+              className="
+                bg-zinc-900
+                p-5
+                rounded-2xl
+                border
+                border-zinc-800
+                text-white
+                transition-all
+                duration-500
+                hover:-translate-y-2
+                hover:border-yellow-500
+              "
+            >
                 ✓ Comfortable Bed
               </div>
 

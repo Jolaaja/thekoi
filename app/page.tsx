@@ -1,3 +1,4 @@
+import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -6,19 +7,26 @@ import VillaSection from "@/components/VillaSection";
 import GuestHouse from "@/components/GuestHouse";
 import Spa from "@/components/Spa";
 import Cafe from "@/components/Cafe";
+import JamuBar from "@/components/JamuBar";
 import Gallery from "@/components/Gallery";
+import Location from "@/components/Location";
 import Booking from "@/components/Booking";
 import Footer from "@/components/Footer";
-import Location from "@/components/Location";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import WhatsappButton from "@/components/WhatsappButton";
+import BookingWidget from "@/components/BookingWidget";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
-  return (
-    <>
+      return (
+        <>
+      <Loader />
+
       <Navbar />
 
       <Hero />
+
+      <BookingWidget />
 
       <About />
 
@@ -32,6 +40,8 @@ export default function Home() {
 
       <Cafe />
 
+      <JamuBar />
+
       <Gallery />
 
       <Location />
@@ -41,7 +51,10 @@ export default function Home() {
       <Footer />
 
       <FloatingWhatsApp />
+
       <WhatsappButton />
+
+      <BackToTop />
     </>
   );
 }

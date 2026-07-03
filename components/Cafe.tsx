@@ -4,11 +4,13 @@ export default function Cafe() {
   return (
     <section
       id="cafe"
+      data-aos="zoom-in"
       className="bg-black py-32"
     >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
+
         <div className="text-center mb-20">
 
           <p className="uppercase tracking-[5px] text-yellow-500">
@@ -29,10 +31,23 @@ export default function Cafe() {
         </div>
 
         {/* CONTENT */}
+
         <div className="grid lg:grid-cols-2 gap-12">
 
           {/* FOTO BESAR */}
-          <div className="relative h-[650px] rounded-3xl overflow-hidden group">
+
+          <div
+            className="
+              relative
+              h-[650px]
+              rounded-3xl
+              overflow-hidden
+              group
+              transition-all
+              duration-500
+              hover:-translate-y-2
+            "
+          >
 
             <Image
               src="/images/cafe/cafe-2.jpeg"
@@ -52,9 +67,21 @@ export default function Cafe() {
           </div>
 
           {/* FOTO KECIL */}
+
           <div className="grid grid-cols-2 gap-4">
 
-            <div className="relative h-[315px] rounded-3xl overflow-hidden group">
+            <div
+              className="
+                relative
+                h-[315px]
+                rounded-3xl
+                overflow-hidden
+                group
+                transition-all
+                duration-500
+                hover:-translate-y-2
+              "
+            >
 
               <Image
                 src="/images/cafe/cafe-1.jpeg"
@@ -70,7 +97,18 @@ export default function Cafe() {
 
             </div>
 
-            <div className="relative h-[315px] rounded-3xl overflow-hidden group">
+            <div
+              className="
+                relative
+                h-[315px]
+                rounded-3xl
+                overflow-hidden
+                group
+                transition-all
+                duration-500
+                hover:-translate-y-2
+              "
+            >
 
               <Image
                 src="/images/cafe/cafe-3.jpeg"
@@ -86,7 +124,19 @@ export default function Cafe() {
 
             </div>
 
-            <div className="relative h-[315px] rounded-3xl overflow-hidden col-span-2 group">
+            <div
+              className="
+                relative
+                h-[315px]
+                rounded-3xl
+                overflow-hidden
+                col-span-2
+                group
+                transition-all
+                duration-500
+                hover:-translate-y-2
+              "
+            >
 
               <Image
                 src="/images/cafe/cafe-4.jpeg"
@@ -107,42 +157,105 @@ export default function Cafe() {
         </div>
 
         {/* FEATURES */}
+
         <div className="mt-16">
 
           <div className="grid md:grid-cols-4 gap-6">
 
-            <div className="bg-zinc-900 p-6 rounded-2xl text-center text-white border border-zinc-800">
+            <div
+              className="
+                bg-zinc-900
+                p-6
+                rounded-2xl
+                text-center
+                text-white
+                border
+                border-zinc-800
+                transition-all
+                duration-500
+                hover:-translate-y-2
+                hover:border-yellow-500
+              "
+            >
               ☕ Premium Coffee
             </div>
 
-            <div className="bg-zinc-900 p-6 rounded-2xl text-center text-white border border-zinc-800">
+            <div
+              className="
+                bg-zinc-900
+                p-6
+                rounded-2xl
+                text-center
+                text-white
+                border
+                border-zinc-800
+                transition-all
+                duration-500
+                hover:-translate-y-2
+                hover:border-yellow-500
+              "
+            >
               🍽 Quality Food
             </div>
 
-            <div className="bg-zinc-900 p-6 rounded-2xl text-center text-white border border-zinc-800">
+            <div
+              className="
+                bg-zinc-900
+                p-6
+                rounded-2xl
+                text-center
+                text-white
+                border
+                border-zinc-800
+                transition-all
+                duration-500
+                hover:-translate-y-2
+                hover:border-yellow-500
+              "
+            >
               🎱 Billiard Area
             </div>
 
-            <div className="bg-zinc-900 p-6 rounded-2xl text-center text-white border border-zinc-800">
+            <div
+              className="
+                bg-zinc-900
+                p-6
+                rounded-2xl
+                text-center
+                text-white
+                border
+                border-zinc-800
+                transition-all
+                duration-500
+                hover:-translate-y-2
+                hover:border-yellow-500
+              "
+            >
               📶 Free WiFi
             </div>
 
           </div>
 
           {/* DESCRIPTION */}
+
           <div className="max-w-4xl mx-auto text-center mt-12">
 
             <p className="text-gray-400 leading-8">
+
               Pika Piko Cafe merupakan bagian dari
+
               <span className="text-yellow-500">
                 {" "}The Koi Experience
               </span>
+
               {" "}
+
               yang berlokasi terpisah dari area Villa,
               Guest House dan Spa. Menghadirkan suasana
               hangat untuk menikmati kopi, makanan,
               serta waktu berkualitas bersama keluarga,
               teman maupun komunitas.
+
             </p>
 
             <div className="flex justify-center mt-8">
@@ -166,6 +279,7 @@ export default function Cafe() {
           </div>
 
           {/* BUTTON */}
+
           <div className="flex flex-wrap justify-center gap-4 mt-10">
 
             <a
@@ -183,6 +297,7 @@ export default function Cafe() {
                 transition-all
                 duration-300
                 hover:scale-105
+                shadow-lg
               "
             >
               View Cafe Location
@@ -203,6 +318,7 @@ export default function Cafe() {
                 font-semibold
                 transition-all
                 duration-300
+                hover:bg-white/5
               "
             >
               Contact Cafe

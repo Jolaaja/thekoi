@@ -1,18 +1,341 @@
 @import "tailwindcss";
 
-html{
-  scroll-behavior:smooth;
-}
+/* =======================================================
+   THE KOI GLOBAL STYLE
+======================================================= */
 
-body{
-  margin:0;
-  padding:0;
-  background:#000;
-  html {
+html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background: #000;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* =======================================================
+   LOADER
+======================================================= */
+
+@keyframes loader {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-loader {
+  animation: loader 1.8s linear infinite;
+}
+
+/* =======================================================
+   HERO BACKGROUND (KEN BURNS)
+======================================================= */
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-hero {
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
+
+/* =======================================================
+   HERO TEXT
+======================================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: .3s;
+}
+
+.delay-2 {
+  animation-delay: .6s;
+}
+
+.delay-3 {
+  animation-delay: .9s;
+}
+
+.delay-4 {
+  animation-delay: 1.2s;
+}
+
+/* =======================================================
+   FADE IN
+======================================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn .8s ease;
+}
+
+/* =======================================================
+   FLOATING
+======================================================= */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* =======================================================
+   PREMIUM CARD
+======================================================= */
+
+.premium-card {
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgb(234 179 8);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, .35);
+}
+
+/* =======================================================
+   PREMIUM BUTTON
+======================================================= */
+
+.premium-button {
+  transition: all .35s ease;
+}
+
+.premium-button:hover {
+  transform: translateY(-3px) scale(1.03);
+
+  box-shadow:
+    0 12px 35px rgba(234, 179, 8, .35);
+}
+
+/* =======================================================
+   PREMIUM IMAGE
+======================================================= */
+
+.premium-image {
+  transition:
+    transform .8s ease,
+    filter .8s ease;
+}
+
+.premium-image:hover {
+  transform: scale(1.08);
+
+  filter: brightness(1.08);
+}
+
+/* =======================================================
+   SECTION DIVIDER
+======================================================= */
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,.12),
+    transparent
+  );
+}
+
+/* =======================================================
+   BOOKING WIDGET
+======================================================= */
+
+input[type="date"],
+input[type="number"],
+select {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+}
+
+input[type="date"]::placeholder,
+input[type="number"]::placeholder {
+  color: #6b7280;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 1;
+  filter: invert(0);
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #111827;
+}
+
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #eab308;
+  box-shadow: 0 0 0 4px rgba(234,179,8,.2);
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select option {
+  background: #ffffff;
+  color: #111827;
+}
+
+/* =======================================================
+   LENIS
+======================================================= */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* =======================================================
+   SCROLLBAR
+======================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eab308;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #facc15;
+}
+
+/* =======================================================
+   TEXT SELECTION
+======================================================= */
+
+::selection {
+  background: #eab308;
+  color: #000;
+}
+
+/* =======================================================
+   PROGRESS BAR
+======================================================= */
+
+.progress-shadow {
+  box-shadow:
+    0 0 8px rgba(234,179,8,.7),
+    0 0 18px rgba(234,179,8,.35);
+}
+
+/* =======================================================
+   BACK TO TOP
+======================================================= */
+
+.back-to-top {
+  transition: all .35s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px) scale(1.08);
+}
+
+/* =======================================================
+   FOCUS
+======================================================= */
+
+button,
+a,
+input,
+select,
+textarea {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #eab308;
+  outline-offset: 3px;
 }

@@ -2,9 +2,12 @@ export default function Booking() {
   return (
     <section
       id="contact"
+      data-aos="zoom-in-up"
       className="bg-black py-32"
     >
       <div className="max-w-5xl mx-auto px-6 text-center">
+
+        {/* HEADER */}
 
         <p className="uppercase tracking-[5px] text-yellow-500">
           Booking & Reservation
@@ -20,30 +23,37 @@ export default function Booking() {
           Pilih admin yang tersedia untuk mendapatkan respon lebih cepat.
         </p>
 
+        {/* ADMIN */}
+
         <div className="grid md:grid-cols-3 gap-6">
 
           {/* MELA */}
-          <div className="
-            bg-zinc-900
-            rounded-3xl
-            p-8
-            border
-            border-zinc-800
-            hover:border-yellow-500/50
-            hover:-translate-y-2
-            transition-all
-            duration-300
-          ">
-            <h3 className="text-white text-2xl font-bold mb-1">
+
+          <div
+            className="
+              bg-zinc-900
+              rounded-3xl
+              p-8
+              border
+              border-zinc-800
+              transition-all
+              duration-500
+              hover:-translate-y-2
+              hover:border-yellow-500
+              hover:shadow-2xl
+            "
+          >
+
+            <h3 className="text-white text-2xl font-bold">
               Mela
             </h3>
 
-            <p className="text-yellow-500 text-sm mb-3">
+            <p className="text-yellow-500 mt-2 mb-6">
               Reservation Admin
             </p>
 
             <a
-             href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20bertanya%20mengenai%20reservasi."
+              href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20bertanya%20mengenai%20reservasi."
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -55,7 +65,9 @@ export default function Booking() {
                 py-3
                 rounded-full
                 font-semibold
-                transition
+                transition-all
+                duration-300
+                hover:scale-105
               "
             >
               WhatsApp Mela
@@ -64,22 +76,27 @@ export default function Booking() {
           </div>
 
           {/* ANGGI */}
-          <div className="
-            bg-zinc-900
-            rounded-3xl
-            p-8
-            border
-            border-zinc-800
-            hover:border-yellow-500/50
-            hover:-translate-y-2
-            transition-all
-            duration-300
-          ">
-            <h3 className="text-white text-2xl font-bold mb-1">
+
+          <div
+            className="
+              bg-zinc-900
+              rounded-3xl
+              p-8
+              border
+              border-zinc-800
+              transition-all
+              duration-500
+              hover:-translate-y-2
+              hover:border-yellow-500
+              hover:shadow-2xl
+            "
+          >
+
+            <h3 className="text-white text-2xl font-bold">
               Anggi
             </h3>
 
-            <p className="text-yellow-500 text-sm mb-3">
+            <p className="text-yellow-500 mt-2 mb-6">
               Reservation Admin
             </p>
 
@@ -96,7 +113,9 @@ export default function Booking() {
                 py-3
                 rounded-full
                 font-semibold
-                transition
+                transition-all
+                duration-300
+                hover:scale-105
               "
             >
               WhatsApp Anggi
@@ -105,22 +124,27 @@ export default function Booking() {
           </div>
 
           {/* ASTI */}
-          <div className="
-            bg-zinc-900
-            rounded-3xl
-            p-8
-            border
-            border-zinc-800
-            hover:border-yellow-500/50
-            hover:-translate-y-2
-            transition-all
-            duration-300
-          ">
-            <h3 className="text-white text-2xl font-bold mb-1">
+
+          <div
+            className="
+              bg-zinc-900
+              rounded-3xl
+              p-8
+              border
+              border-zinc-800
+              transition-all
+              duration-500
+              hover:-translate-y-2
+              hover:border-yellow-500
+              hover:shadow-2xl
+            "
+          >
+
+            <h3 className="text-white text-2xl font-bold">
               Asti
             </h3>
 
-            <p className="text-yellow-500 text-sm mb-3">
+            <p className="text-yellow-500 mt-2 mb-6">
               Reservation Admin
             </p>
 
@@ -137,7 +161,9 @@ export default function Booking() {
                 py-3
                 rounded-full
                 font-semibold
-                transition
+                transition-all
+                duration-300
+                hover:scale-105
               "
             >
               WhatsApp Asti

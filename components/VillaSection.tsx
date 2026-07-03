@@ -4,6 +4,7 @@ export default function VillaSection() {
   return (
     <section
       id="villa"
+      data-aos="fade-right"
       className="bg-[#0a0a0a] py-32"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -28,10 +29,10 @@ export default function VillaSection() {
 
         </div>
 
-        {/* Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* Image */}
+          {/* IMAGE */}
+
           <div className="relative h-[650px] rounded-3xl overflow-hidden group">
 
             <Image
@@ -39,25 +40,20 @@ export default function VillaSection() {
               alt="The Villa Koi"
               fill
               priority
-              className="
-                object-cover
-                transition
-                duration-700
-                group-hover:scale-105
-              "
+              className="object-cover transition duration-700 group-hover:scale-105"
             />
 
             <div className="absolute inset-0 bg-black/10"></div>
 
           </div>
 
-          {/* Text */}
+          {/* CONTENT */}
+
           <div>
 
-            {/* Stats */}
             <div className="grid grid-cols-2 gap-6 mb-10">
 
-              <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 transition-all duration-500 hover:-translate-y-2 hover:border-yellow-500">
 
                 <h3 className="text-yellow-500 text-3xl font-bold">
                   4+
@@ -69,7 +65,7 @@ export default function VillaSection() {
 
               </div>
 
-              <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 transition-all duration-500 hover:-translate-y-2 hover:border-yellow-500">
 
                 <h3 className="text-yellow-500 text-3xl font-bold">
                   24/7
@@ -83,8 +79,7 @@ export default function VillaSection() {
 
             </div>
 
-            {/* Price Card */}
-            <div className="bg-yellow-500 text-black p-6 rounded-2xl mb-8">
+            <div className="bg-yellow-500 text-black rounded-2xl p-6 mb-8 shadow-lg">
 
               <p className="uppercase tracking-[3px] text-sm">
                 Starting From
@@ -100,7 +95,6 @@ export default function VillaSection() {
 
             </div>
 
-            {/* Features */}
             <ul className="space-y-5 text-gray-300 text-lg mb-10">
 
               <li>✓ Private Villa Experience</li>
@@ -117,27 +111,11 @@ export default function VillaSection() {
 
             </ul>
 
-            {/* Button */}
             <a
               href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20booking%20Villa%20Rp2.000.000%20per%20malam."
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                inline-flex
-                items-center
-                justify-center
-                bg-yellow-500
-                hover:bg-yellow-400
-                text-black
-                font-semibold
-                px-8
-                py-4
-                rounded-full
-                transition-all
-                duration-300
-                hover:scale-105
-                shadow-lg
-              "
+              className="inline-flex items-center justify-center bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Book Villa
             </a>
@@ -147,6 +125,7 @@ export default function VillaSection() {
         </div>
 
       </div>
+
     </section>
   );
 }

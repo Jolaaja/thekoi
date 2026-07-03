@@ -7,22 +7,57 @@ import { HiMenu, HiX } from "react-icons/hi";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
+    const sections = [
+      "home",
+      "villa",
+      "guesthouse",
+      "spa",
+      "cafe",
+      "jamu",
+      "location",
+      "contact",
+    ];
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      const scrollPosition = window.scrollY + 120;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+
+        if (!element) continue;
+
+        if (
+          scrollPosition >= element.offsetTop &&
+          scrollPosition < element.offsetTop + element.offsetHeight
+        ) {
+          setActiveSection(section);
+          break;
+        }
+      }
     };
+
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const closeMenu = () => {
-    setMobileMenu(false);
-  };
+  const closeMenu = () => setMobileMenu(false);
+
+  const linkClass = (section: string) =>
+    [
+      "relative",
+      "transition-all",
+      "duration-300",
+      activeSection === section
+        ? "text-yellow-500"
+        : "text-white hover:text-yellow-500",
+    ].join(" ");
 
   return (
     <header
@@ -55,6 +90,7 @@ export default function Navbar() {
             />
 
             <div>
+
               <h1 className="text-white font-bold tracking-[3px] text-xl">
                 THE KOI
               </h1>
@@ -62,78 +98,82 @@ export default function Navbar() {
               <p className="text-yellow-500 text-[10px] tracking-[4px] uppercase">
                 Luxury Escape
               </p>
+
             </div>
+
           </a>
 
           {/* DESKTOP MENU */}
+
           <nav className="hidden md:flex items-center gap-8">
-
-            <a
-              href="#home"
-              className="text-white hover:text-yellow-500 transition"
-            >
+            <a href="#home" className={linkClass("home")}> 
               Home
+              {activeSection === "home" && (
+                <span className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-yellow-500" />
+              )}
             </a>
 
-            <a
-              href="#villa"
-              className="text-white hover:text-yellow-500 transition"
-            >
+            <a href="#villa" className={linkClass("villa")}>
               Villa
+              {activeSection === "villa" && (
+                <span className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-yellow-500" />
+              )}
             </a>
 
-            <a
-              href="#guesthouse"
-              className="text-white hover:text-yellow-500 transition"
-            >
+            <a href="#guesthouse" className={linkClass("guesthouse")}>
               Guest House
+              {activeSection === "guesthouse" && (
+                <span className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-yellow-500" />
+              )}
             </a>
 
-            <a
-              href="#spa"
-              className="text-white hover:text-yellow-500 transition"
-            >
+            <a href="#spa" className={linkClass("spa")}>
               Spa
+              {activeSection === "spa" && (
+                <span className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-yellow-500" />
+              )}
             </a>
 
-            <a
-              href="#cafe"
-              className="text-white hover:text-yellow-500 transition"
-            >
+            <a href="#cafe" className={linkClass("cafe")}>
               Cafe
+              {activeSection === "cafe" && (
+                <span className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-yellow-500" />
+              )}
             </a>
 
-            <a
-              href="#contact"
-              className="text-white hover:text-yellow-500 transition"
-            >
+            <a href="#jamu" className={linkClass("jamu")}>
+              Jamu Bar
+              {activeSection === "jamu" && (
+                <span className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-yellow-500" />
+              )}
+            </a>
+
+            <a href="#location" className={linkClass("location")}>
+              Location
+              {activeSection === "location" && (
+                <span className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-yellow-500" />
+              )}
+            </a>
+
+            <a href="#contact" className={linkClass("contact")}>
               Contact
+              {activeSection === "contact" && (
+                <span className="absolute left-0 -bottom-2 h-[2px] w-full rounded-full bg-yellow-500" />
+              )}
             </a>
 
             <a
-              href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20bertanya%20mengenai%20reservasi."
+              href="https://wa.me/6285722179300?text=Halo%20The%20Koi,%20saya%20ingin%20melakukan%20reservasi."
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                bg-yellow-500
-                hover:bg-yellow-400
-                text-black
-                px-6
-                py-3
-                rounded-full
-                font-semibold
-                transition-all
-                duration-300
-                hover:scale-105
-                shadow-lg
-              "
+              className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Book Now
             </a>
-
           </nav>
 
           {/* MOBILE BUTTON */}
+
           <button
             onClick={() => setMobileMenu(!mobileMenu)}
             className="md:hidden text-white text-3xl"
@@ -146,22 +186,18 @@ export default function Navbar() {
       </div>
 
       {/* MOBILE MENU */}
-      {mobileMenu && (
-        <div
-          className="
-            md:hidden
-            bg-black/95
-            backdrop-blur-xl
-            border-t
-            border-white/10
-          "
-        >
-          <div className="flex flex-col p-6 gap-6">
 
+      {mobileMenu && (
+        <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
+          <div className="flex flex-col gap-6 p-6">
             <a
               href="#home"
               onClick={closeMenu}
-              className="text-white"
+              className={
+                activeSection === "home"
+                  ? "font-semibold text-yellow-500"
+                  : "text-white"
+              }
             >
               Home
             </a>
@@ -169,7 +205,11 @@ export default function Navbar() {
             <a
               href="#villa"
               onClick={closeMenu}
-              className="text-white"
+              className={
+                activeSection === "villa"
+                  ? "font-semibold text-yellow-500"
+                  : "text-white"
+              }
             >
               Villa
             </a>
@@ -177,7 +217,11 @@ export default function Navbar() {
             <a
               href="#guesthouse"
               onClick={closeMenu}
-              className="text-white"
+              className={
+                activeSection === "guesthouse"
+                  ? "font-semibold text-yellow-500"
+                  : "text-white"
+              }
             >
               Guest House
             </a>
@@ -185,7 +229,11 @@ export default function Navbar() {
             <a
               href="#spa"
               onClick={closeMenu}
-              className="text-white"
+              className={
+                activeSection === "spa"
+                  ? "font-semibold text-yellow-500"
+                  : "text-white"
+              }
             >
               Spa
             </a>
@@ -193,23 +241,47 @@ export default function Navbar() {
             <a
               href="#cafe"
               onClick={closeMenu}
-              className="text-white"
+              className={
+                activeSection === "cafe"
+                  ? "font-semibold text-yellow-500"
+                  : "text-white"
+              }
             >
               Cafe
             </a>
 
             <a
-              href="#gallery"
+              href="#jamu"
               onClick={closeMenu}
-              className="text-white"
+              className={
+                activeSection === "jamu"
+                  ? "font-semibold text-yellow-500"
+                  : "text-white"
+              }
             >
-              Gallery
+              Jamu Bar
+            </a>
+
+            <a
+              href="#location"
+              onClick={closeMenu}
+              className={
+                activeSection === "location"
+                  ? "font-semibold text-yellow-500"
+                  : "text-white"
+              }
+            >
+              Location
             </a>
 
             <a
               href="#contact"
               onClick={closeMenu}
-              className="text-white"
+              className={
+                activeSection === "contact"
+                  ? "font-semibold text-yellow-500"
+                  : "text-white"
+              }
             >
               Contact
             </a>
@@ -219,21 +291,10 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
-              className="
-                bg-yellow-500
-                hover:bg-yellow-400
-                text-black
-                text-center
-                py-3
-                rounded-full
-                font-semibold
-                transition-all
-                duration-300
-              "
+              className="bg-yellow-500 hover:bg-yellow-400 text-black text-center py-3 rounded-full font-semibold transition-all duration-300"
             >
               Book Now
             </a>
-
           </div>
         </div>
       )}
