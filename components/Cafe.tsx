@@ -283,7 +283,7 @@ export default function Cafe() {
           <div className="flex flex-wrap justify-center gap-4 mt-10">
 
             <a
-              href="https://maps.app.goo.gl/WXFyio8psNLFAMAP6"
+              href="https://www.google.com/maps/place/Pika+Piko/@-6.9347382,107.7531637,18z/data=!3m1!4b1!4m10!1m3!2m2!1sandi+rahya+jl.+raya+al+jawami+jl.citel+no.3+rt.01%2Frw.09+cileunyi+wetan+kec.+cileunyi+kabupaten+bandung+jawa+barat+40622!6e1!3m5!1s0x2e68c3006db42a33:0xe7725216adf5678c!8m2!3d-6.934https://www.google.com/maps/@-6.9345936,107.7544648,19.4z?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D7382!4d107.7539032!16s%2Fg%2F11zg4230s2?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="
